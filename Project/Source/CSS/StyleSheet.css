@@ -1,0 +1,70 @@
+﻿* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#wapper {
+    max-width:1000px;
+    width:100%;
+    min-height:500px;
+    background-color:#808080;
+    color:#ffffff;
+    margin:0pc auto;
+}
+
+#header{
+    width:100%;
+    min-height:100px;
+}
+
+#logo {
+   width:30%;
+   min-height:100px;
+   background-color:aqua;
+   float:left;
+   text-align:center;
+}
+
+#banner {
+    width:70%;
+    min-height:100px;
+    background-color:aquamarine;
+    float:right;
+    text-align:center;
+    
+}
+
+#menu-bar {
+   width:100%;
+   min-height:40px;
+   background-color:blue;
+   text-align:center;
+   line-height:40px;
+   font-family:cursive;
+   
+}
+
+#main-content {
+   width:100%;
+   min-height:320px;
+
+}
+
+#left{
+    width:30%;
+    float:left;
+    background-color:blueviolet;
+    min-height:320px;
+    text-align:center;
+}
+
+#content{
+    text-align:center;
+}
+
+#footer {
+    background-color:black;
+    width:100%;
+    min-height:40px;
+    text-align:center;
+}
