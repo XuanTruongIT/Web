@@ -15,22 +15,28 @@
     <form id="form1" runat="server">
         <div id ="wapper">
             <div id="header">
-                <div id ="logo">
-                    Logo here
+                <div id ="logo">  
+                    <asp:Image ImageUrl="~/images/logo.jpg" Width="234px" Height="250px" runat="server" />
                 </div>
                 <%--End logo--%>
                 <div id ="banner">
-                    Banner here
+                    <asp:Image ImageUrl="~/images/anh5.jpg" Width="936px" Height="250px"  runat="server" />
                 </div>
                 <%--End banner--%>
             </div>
             <%--End header--%>
+            <div id="wc">
+                WELCOME TO ROYAL HOTEL
+            </div>
+            <%--Welcome--%>
             <div id ="menu-bar">                           Menu here
             </div>
             <%--End menu-bar--%>
             <div id="main-content">
                 <div id="left">
-                    Left
+                    <ul>
+                        <li></li>
+                    </ul>
                 </div>
                 <%--End left--%>
                 <div id="content">

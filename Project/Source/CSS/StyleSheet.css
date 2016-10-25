@@ -3,31 +3,35 @@
     padding: 0px;
 }
 
+body {
+    background:#eee;
+}
+
 #wapper {
-    max-width:1000px;
-    width:100%;
-    min-height:500px;
-    background-color:#808080;
+    max-width:1170px;
+    min-height:800px;
+    /*background-color:#808080;*/
+    background: linear-gradient(#000, #ff0000);
     color:#ffffff;
     margin:0pc auto;
 }
 
 #header{
     width:100%;
-    min-height:100px;
+    min-height:250px;
 }
 
 #logo {
-   width:30%;
-   min-height:100px;
+   width:20%;
+   min-height:250px;
    background-color:aqua;
    float:left;
    text-align:center;
 }
 
 #banner {
-    width:70%;
-    min-height:100px;
+    width:80%;
+    min-height:250px;
     background-color:aquamarine;
     float:right;
     text-align:center;
@@ -35,7 +39,7 @@
 }
 
 #menu-bar {
-   width:100%;
+   width:1170px;
    min-height:40px;
    background-color:blue;
    text-align:center;
@@ -46,15 +50,15 @@
 
 #main-content {
    width:100%;
-   min-height:320px;
+   min-height:350px;
 
 }
 
 #left{
-    width:30%;
+    width:20%;
     float:left;
     background-color:blueviolet;
-    min-height:320px;
+    min-height:350px;
     text-align:center;
 }
 
@@ -63,8 +67,19 @@
 }
 
 #footer {
-    background-color:black;
+    background:#2554ed;
     width:100%;
-    min-height:40px;
+    min-height:100px;
     text-align:center;
+}
+#wc {
+    line-height:60px;
+    font-family:Arial, Helvetica,Tahoma, sans-serif;
+    font-size:25px;
+    text-align:center;
+    color:#2554ed;
+    background:#fff;
+    width:1170px;
+    min-height:60px;
+    font-weight:bold;
 }
