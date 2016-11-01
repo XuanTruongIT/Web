@@ -4,26 +4,62 @@
 }
 
 body {
-    
+    background:url("../Images/b_g.jpg") !important;
 }
 
 #wc {
     color:#0094ff;
-    background:#ffffff;
+    /*background:#ffffff;*/
     min-height:70px;
     line-height:1.5;
     text-align:center;
     font-family:Arial, Helvetica, sans-serif;
     font-size:35px;
 }
-#menu ul li {
+#menu{
+    margin-left: 538px;
+    width: 60%;
+    min-height: 150px;
+    
+    
+    
+}
+#menu ul{
+    margin-left: 251px;
+    padding-top: 37px;
+
+}
+#menu ul li{
+    line-height:60px;
+    padding:0px 10px;
+    color:#ff0000;
+    float:left;
     list-style:none;
-    float:right;
-    padding:0px 5px;
 }
 #menu ul li a{
+    text-align:right;
+    font-weight:bold;
+    font-size:20px;
     text-decoration:none;
 }
-#menu{
-    position:fixed;
+#logo{
+    width:20%;
+    min-height:150px;
+    float:left;
+}
+#text{
+    min-height: 150px;
+    color:#f52584;
+    float: left;
+    font-family: 'Freestyle Script';
+    font-size: 30px;
+    width: 20%;
+    line-height: 133px;
+}
+#header{
+    
+    max-width:100%;
+    min-height:150px;
+    margin:0 auto;
+   
 }
