@@ -17,44 +17,70 @@
     <form id="form1" runat="server">
         <div id="header">
             <div id="logo">
-               <img src="Images/logo.jpg"  width="200px" title="logo" alt="logo" />
+                <img src="Images/logo.jpg" width="200px" title="logo" alt="logo" />
             </div>
             <div id="text">
                 YOUR SMILE OUR SUCCESS
             </div>
-        <div id="menu">
+            <div id="menu">
                 <ul>
                     <li><a href="#">TRANG CHỦ</a></li>
                     <li><a href="#">ĐẶT PHÒNG</a></li>
                     <li><a href="#">GIỚI THIỆU</a></li>
                     <li><a href="#">LIÊN HỆ</a></li>
+                    <li><a class="login-window" href="#login-box">ĐĂNG NHẬP</a></li>
                 </ul>
             </div>
-        </div>    
-            <div>
-                <%--<asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        </div>
+        <div>
+            <%--<asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
         </asp:ContentPlaceHolder>--%>
-                <ul class="bxslider">
-                    <li>
-                        <img src="/images/pic1.jpg" /></li>
-                    <li>
-                        <img src="/images/pic2.jpg" /></li>
-                    <li>
-                        <img src="/images/pic3.jpg" /></li>
-                    <li>
-                        <img src="/images/pic4.jpg" /></li>
-                    <li>
-                        <img src="/images/pic5.jpeg" /></li>
-                </ul>
-            </div>
-       
+            <ul class="bxslider">
+                <li>
+                    <img src="/images/pic1.jpg" /></li>
+                <li>
+                    <img src="/images/pic2.jpg" /></li>
+                <li>
+                    <img src="/images/pic3.jpg" /></li>
+                <li>
+                    <img src="/images/pic4.jpg" /></li>
+                <li>
+                    <img src="/images/pic5.jpeg" /></li>
+            </ul>
+        </div>
+
         <div id="wc">
-            Welcome to Royal Hotel!<br/> 
-                CHÀO MỪNG QUÝ KHÁCH ĐẾN VỚI KHÁCH SẠN ROYAL
+            Welcome to Royal Hotel!<br />
+            CHÀO MỪNG QUÝ KHÁCH ĐẾN VỚI KHÁCH SẠN ROYAL
         </div>
     </form>
 
-    
+
+
+
+<div class="login" id="login-box">
+    <br />
+            Đăng nhập
+ 
+ <a class="close" href="#">
+     <img class="img_close" src="Images/close1.png" /><br />
+ </a>
+    <br />
+            <form class="login-content">
+                <label class="username">
+                    <span>Tên hoặc email</span>
+                    <input id="username" type="text" autocomplete="on" name="username" placeholder="Username" value="" />
+                </label>
+                <label class="password">
+                    <span>Mật khẩu</span>
+                    <input id="password" type="password" name="password" placeholder="Password" value="" />
+                </label>
+                <button class="button submit-button" type="button">Đăng nhập</button>
+
+               
+            </form>
+        </div>
+
 
     <script>
         $(document).ready(function () {
@@ -65,5 +91,32 @@
         });
 
     </script>
+
+
+    <script>
+    $(document).ready(function() {
+    $('a.login-window').click(function() {
+        //lấy giá trị thuộc tính href - chính là phần tử "#login-box"
+        var loginBox = $(this).attr('href');
+ 
+        //cho hiện hộp đăng nhập trong 300ms
+        $(loginBox).fadeIn(300);
+ 
+        // thêm phần tử id="over" vào sau body
+        $('body').append('<div id="over">');
+        $('#over').fadeIn(300);
+ 
+        return false;
+ });
+ 
+ // khi click đóng hộp thoại
+ $(document).on('click', "a.close, #over", function() {
+       $('#over, .login').fadeOut(300 , function() {
+           $('#over').remove();
+       });
+      return false;
+ });
+    });
+     </script>
 </body>
 </html>
