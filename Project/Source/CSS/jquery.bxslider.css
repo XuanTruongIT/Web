@@ -22,6 +22,7 @@
 }
 
 .bx-wrapper img {
+    height: 845px;
 	max-width: 100%;
 	display: block;
 }
@@ -175,8 +176,7 @@
 /* PAGER WITH AUTO-CONTROLS HYBRID LAYOUT */
 
 .bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {
-	text-align: left;
-	width: 80%;
+	margin-bottom: 55px;
 }
 
 .bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {

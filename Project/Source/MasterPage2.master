@@ -4,14 +4,15 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
-    <script src="JS/jquery-3.1.1.min.js"></script>
-    <script src="JS/jquery.bxslider.min.js"></script>
-    <%--<script src="JS/bootstrap.min.js"></script>--%>
+    <title>Khach san</title>
+
     <link href="CSS/jquery.bxslider.css" rel="stylesheet" />
     <link href="CSS/StyleSheet2.css" rel="stylesheet" />
-    <asp:ContentPlaceHolder ID="head" runat="server">
-    </asp:ContentPlaceHolder>
+    <link href="Images/icon.jpg" rel="shortcut icon" />
+    <script src="JS/jquery-3.1.1.min.js"></script>
+    <script src="JS/jquery.bxslider.min.js"></script>
+    <script src="JS/bootstrap.min.js"></script>
+
 </head>
 <body>
     <form id="form1" runat="server">
@@ -33,8 +34,6 @@
             </div>
         </div>
         <div>
-            <%--<asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
-        </asp:ContentPlaceHolder>--%>
             <ul class="bxslider">
                 <li>
                     <img src="/images/pic1.jpg" /></li>
@@ -48,75 +47,104 @@
                     <img src="/images/pic5.jpeg" /></li>
             </ul>
         </div>
+        <%--End slide--%>
+        
 
-        <div id="wc">
-            Welcome to Royal Hotel!<br />
-            CHÀO MỪNG QUÝ KHÁCH ĐẾN VỚI KHÁCH SẠN ROYAL
+        <div class="content">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
         </div>
+        <%--End content--%>
+
+        <div id="footer">
+            <div id="lienhe">
+                <ul>
+                    <li>
+                        <h2>MẠNG XÃ HỘI</h2>
+                    </li>
+                    <li><a href="#">
+                        <img src="Images/facebook.png" width="40" /></a></li>
+                    <li><a href="#">
+                        <img src="Images/google-plus.png" width="40" /></a></li>
+                    <li><a href="#">
+                        <img src="Images/twitter.png" width="40" /></a></li>
+                </ul>
+
+            </div>
+            <div id="thongtin">
+                <ul>
+                    <li id="anh1">Khách sạn Royal Hà Nội  </li>
+                    <li id="anh2">Số điện thoại:+84 977 608 667 </li>
+                    <li id="anh3">Mọi thông tin chi tiết xin liên hệ Bộ phận đặt phòng tại email xuantruong@royalhotel.com</li>
+                    <li id="anh4">Copyright © Bản quyền thuộc về khách sạn Hà Nội Royal 2016</li>
+                </ul>
+            </div>
+        </div>
+
     </form>
 
 
 
 
-<div class="login" id="login-box">
-    <br />
-            Đăng nhập
+    <div class="login" id="login-box">
+        <br />
+        Đăng nhập
  
  <a class="close" href="#">
      <img class="img_close" src="Images/close1.png" /><br />
  </a>
-    <br />
-            <form class="login-content">
-                <label class="username">
-                    <span>Tên hoặc email</span>
-                    <input id="username" type="text" autocomplete="on" name="username" placeholder="Username" value="" />
-                </label>
-                <label class="password">
-                    <span>Mật khẩu</span>
-                    <input id="password" type="password" name="password" placeholder="Password" value="" />
-                </label>
-                <button class="button submit-button" type="button">Đăng nhập</button>
-
-               
-            </form>
-        </div>
+        <br />
+        <form class="login-content">
+            <label class="username">
+                <span>Tên hoặc email</span>
+                <input id="username" type="text" autocomplete="on" name="username" placeholder="Username" value="" />
+            </label>
+            <label class="password">
+                <span>Mật khẩu</span>
+                <input id="password" type="password" name="password" placeholder="Password" value="" />
+            </label>
+            <button class="button submit-button" type="button">Đăng nhập</button>
 
 
+        </form>
+    </div>
+
+    <%--Slide--%>
     <script>
         $(document).ready(function () {
             $('.bxslider').bxSlider({
                 auto: true,
-                autoControls: true
+                autoControls: true,
+                controls: true
             });
         });
-
     </script>
+    <%--End slide--%>
 
 
     <script>
-    $(document).ready(function() {
-    $('a.login-window').click(function() {
-        //lấy giá trị thuộc tính href - chính là phần tử "#login-box"
-        var loginBox = $(this).attr('href');
- 
-        //cho hiện hộp đăng nhập trong 300ms
-        $(loginBox).fadeIn(300);
- 
-        // thêm phần tử id="over" vào sau body
-        $('body').append('<div id="over">');
-        $('#over').fadeIn(300);
- 
-        return false;
- });
- 
- // khi click đóng hộp thoại
- $(document).on('click', "a.close, #over", function() {
-       $('#over, .login').fadeOut(300 , function() {
-           $('#over').remove();
-       });
-      return false;
- });
-    });
-     </script>
+        $(document).ready(function () {
+            $('a.login-window').click(function () {
+                //lấy giá trị thuộc tính href - chính là phần tử "#login-box"
+                var loginBox = $(this).attr('href');
+
+                //cho hiện hộp đăng nhập trong 300ms
+                $(loginBox).fadeIn(300);
+
+                // thêm phần tử id="over" vào sau body
+                $('body').append('<div id="over">');
+                $('#over').fadeIn(300);
+
+                return false;
+            });
+
+            // khi click đóng hộp thoại
+            $(document).on('click', "a.close, #over", function () {
+                $('#over, .login').fadeOut(300, function () {
+                    $('#over').remove();
+                });
+                return false;
+            });
+        });
+    </script>
 </body>
 </html>

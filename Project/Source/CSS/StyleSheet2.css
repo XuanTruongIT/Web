@@ -172,3 +172,46 @@ a, a:visited, a:active{
     margin: 15px 75px;
     width: 150px;
 }
+#lienhe{
+    background: #0094ff;
+    color:white;
+    min-height: 40px;
+    padding-left: 1000px;
+}
+#lienhe>ul>li{
+    padding-right: 10px;
+    list-style: none;
+    float: left;
+    line-height: 40px;
+}
+#thongtin{
+    clear:both;
+}
+#thongtin #anh1{
+    margin-left: 90px;
+    font-size:17px;
+    list-style-image:url("../Images/myhouse.png")/*,url("../Images/phone.png"),url("../Images/mail.png")*/;   
+}
+#thongtin #anh2{
+    margin-left: 90px;
+    font-size:17px;
+    list-style-image:url("../Images/phone.png")/*url("../Images/mail.png")*/;   
+}
+#thongtin #anh3{
+    margin-left: 90px;
+    font-size:17px;
+    list-style-image:url("../Images/mail.png");   
+}
+#thongtin #anh4{
+    
+    margin-top:15px;
+    list-style:none;
+    margin-left: 90px;
+    font-size:17px;
+   
+}
+.content{
+    width:100%;
+    min-height:500px;
+    background:#ccc;
+}
