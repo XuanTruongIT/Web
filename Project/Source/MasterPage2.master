@@ -9,6 +9,8 @@
     <link href="CSS/jquery.bxslider.css" rel="stylesheet" />
     <link href="CSS/StyleSheet2.css" rel="stylesheet" />
     <link href="Images/icon.jpg" rel="shortcut icon" />
+    <link href="CSS/bootstrap.min.css" rel="stylesheet" />
+    <link href="CSS/bootstrap-theme.min.css" rel="stylesheet" />
     <script src="JS/jquery-3.1.1.min.js"></script>
     <script src="JS/jquery.bxslider.min.js"></script>
     <script src="JS/bootstrap.min.js"></script>
@@ -18,7 +20,7 @@
     <form id="form1" runat="server">
         <div id="header">
             <div id="logo">
-                <img src="Images/logo.jpg" width="200px" title="logo" alt="logo" />
+                <img src="Images/logo.jpg" width="200" title="logo" alt="logo" />
             </div>
             <div id="text">
                 YOUR SMILE OUR SUCCESS
