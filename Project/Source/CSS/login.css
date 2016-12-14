@@ -1,0 +1,111 @@
+﻿
+body {
+  font: 13px/20px 'Lucida Grande', Tahoma, Verdana, sans-serif;
+  color: #404040;
+ background:white;
+}
+
+#header{
+    margin: 0 ;
+    min-height:100px;
+    background:white;
+    width:100%;
+    text-align:center;
+    box-sizing:border-box;
+    box-shadow: 0px 2px 2px #d0d4d9;
+}
+#logo{
+    
+    font-family:Vivaldi;
+    padding-top:25px;
+    font-size:30px;
+}
+#logo a{
+    color:blue;
+    text-decoration:none;
+}
+#content{
+    width:100%;
+    height:auto;
+  
+}
+.login {
+    position: relative;
+    margin: 0 auto;
+    padding: 20px 20px 20px;
+    width: 310px;
+    background: white;
+    border:3px solid #d4d4d4;
+    border-radius:3px;
+    margin-top:90px;
+}
+
+
+  h1 {
+    margin: -20px -20px 21px;
+    line-height: 40px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #555;
+    text-align: center;
+    text-shadow: 0 1px white;
+    background: #f3f3f3;
+    border-bottom: 1px solid #cfcfcf;
+    border-radius: 3px 3px 0 0;
+    
+  }
+
+  p { margin: 20px 0 0; }
+  p:first-child { margin-top: 0; }
+
+  input[type=text], input[type=password] { width: 278px; }
+
+ 
+    input {
+      position: relative;
+      bottom: 1px;
+      margin-right: 4px;
+      vertical-align: middle;
+    }
+
+  p.submit { text-align: right; }
+
+
+
+
+
+
+input {
+  font-family: 'Lucida Grande', Tahoma, Verdana, sans-serif;
+  font-size: 14px;
+}
+
+input[type=text], input[type=password] {
+  margin: 5px;
+  padding: 0 10px;
+  width: 200px;
+  height: 34px;
+  color: #404040;
+  background: white;
+  border: 1px solid;
+  border-color: #c4c4c4 #d1d1d1 #d4d4d4;
+  border-radius: 2px;
+  outline: 5px solid #eff4f7;
+ 
+}
+
+input[type=submit] {
+  padding: 0 18px;
+  height: 29px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #527881;
+  text-shadow: 0 1px #e3f1f1;
+  background: #cde5ef;
+  border: 1px solid;
+  border-color: #b4ccce #b3c0c8 #9eb9c2;
+  border-radius: 16px;
+  outline: 0;
+
+}
+
