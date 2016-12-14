@@ -3,24 +3,30 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<link href="CSS/login.css" rel="stylesheet" />
+
 <head runat="server">
+    <link href="CSS/login.css" rel="stylesheet" />
     <title></title>
 </head>
 <body>
-    <div id="header">
-        <h2 id="logo"><a href="Default3.aspx">Royal Ha Noi </a></h2>
+    <form id="form1" runat="server">
+    <div id="wrapper">
+        <div id="header">
+            <div id="logo"><img src="Images/logo.jpg" width="200" height="100"/></div>
+            <div id="rightheader"><a href="Default3.aspx">Royal Ha Noi</a></div>
+        </div>
+        <div id="content">
+            <div id="anh">
+                <img id="anh1"src="Images/pic4.jpg" width="400" height="300" />
+            </div>
+            <div id="login">
+               <h1>Login</h1>
+                <p><asp:TextBox ID="txtUserName" runat="server" placeholder="Username" required="required"></asp:TextBox></p>
+                <p><asp:TextBox ID="txtPassWord" runat="server" placeholder="Password" required="required"></asp:TextBox></p>
+                <p><asp:Button ID="btnLogin" runat="server" Text="Login" /></p>
+            </div>
+        </div>
     </div>
-    <div id="content">
-    <div class="login">
-      <h1>Login</h1>
-      <form method="post" action="index.html">
-        <p><input type="text" name="login" value="" placeholder="Username"></p>
-        <p><input type="password" name="password" value="" placeholder="Password"></p>
-        <p class="submit"><input type="submit" name="commit" value="Login"></p>
-      </form>
-    </div>
-   </div>
-
+    </form>
 </body>
 </html>
