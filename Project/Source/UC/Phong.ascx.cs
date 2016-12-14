@@ -5,14 +5,10 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class MasterPage3 : System.Web.UI.MasterPage
+public partial class UC_Phong : System.Web.UI.UserControl
 {
     protected void Page_Load(object sender, EventArgs e)
     {
 
     }
-
-
-
-    
 }

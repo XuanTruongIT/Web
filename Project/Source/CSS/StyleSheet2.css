@@ -73,9 +73,7 @@ body {
     height: 755px;
 }
 
-.content{
-        margin-top: 10px;
-}
+
 
 
 
@@ -229,6 +227,7 @@ a, a:visited, a:active{
    
 }
 .content{
+    margin-top:10px;
     width:100%;
     min-height:500px;
     background:#ccc;

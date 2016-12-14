@@ -2,17 +2,25 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Data;
+using System.Data.SqlClient;
+
+
 
 /// <summary>
 /// Summary description for PhongDAL
 /// </summary>
-public class PhongDAL
+public class PhongDal:DBConnect
 {
-    public PhongDAL()
+    DBConnect db = new DBConnect();
+    
+    public DataTable getAllData()
     {
-        //
-        // TODO: Add constructor logic here
-        //
-        
+        string sql = "SELECT * FROM Phong";
+        return db.getAllData(sql);
     }
+   
+
+
+
 }

@@ -33,4 +33,13 @@ public class DBConnect
             conn.Close();
         }
     }
+
+    public DataTable getAllData(string sql)
+    {
+        da = new SqlDataAdapter(sql, conn);
+        DataTable dt = new DataTable();
+        da.Fill(dt);
+        return dt;
+    }
+
 }

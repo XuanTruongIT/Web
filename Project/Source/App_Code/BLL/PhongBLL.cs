@@ -2,16 +2,18 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Data;
+using System.Data.SqlClient;
 
 /// <summary>
 /// Summary description for PhongBLL
 /// </summary>
-public class PhongBLL
+public class PhongBll
 {
-    public PhongBLL()
+    PhongDal _phongDal = new PhongDal();
+   
+    public DataTable getAllData()
     {
-        //
-        // TODO: Add constructor logic here
-        //
+        return _phongDal.getAllData();
     }
 }
