@@ -9,7 +9,7 @@
     <title></title>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="form1" runat="server" autocomplete="on" method="post">
     <div id="wrapper">
         <div id="header">
             <div id="logo"><img src="Images/logo.jpg" width="200" height="100"/></div>
@@ -21,9 +21,9 @@
             </div>
             <div id="login">
                <h1>Login</h1>
-                <p><asp:TextBox ID="txtUserName" runat="server" placeholder="Username" required="required"></asp:TextBox></p>
-                <p><asp:TextBox ID="txtPassWord" runat="server" placeholder="Password" required="required"></asp:TextBox></p>
-                <p><asp:Button ID="btnLogin" runat="server" Text="Login" /></p>
+                <p><asp:TextBox ID="txtUserName" runat="server" placeholder="Username" required="required" ></asp:TextBox></p>
+                <p><asp:TextBox ID="txtPassWord" runat="server" placeholder="Password" TextMode="Password" required="required" ></asp:TextBox></p>
+                <p><asp:Button ID="btnLogin" runat="server" Text="Login"  /></p>
             </div>
         </div>
     </div>

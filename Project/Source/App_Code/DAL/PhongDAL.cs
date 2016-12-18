@@ -14,13 +14,17 @@ public class PhongDal:DBConnect
 {
     DBConnect db = new DBConnect();
     
-    public DataTable getAllData()
-    {
-        string sql = "SELECT * FROM Phong";
-        return db.getAllData(sql);
-    }
    
 
+    public DataTable getAllData()
+    {
+        ConnectDB();
+        string sql = "SELECT * FROM Phong";
+        da = new SqlDataAdapter(sql, conn);
+        dt = new DataTable();
+        da.Fill(dt);
+        return dt;
+    }
 
 
 }

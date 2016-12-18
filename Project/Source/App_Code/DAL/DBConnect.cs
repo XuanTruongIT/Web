@@ -13,6 +13,8 @@ public class DBConnect
     public SqlDataAdapter da;
     public SqlConnection conn;
     public SqlCommand cmd;
+    public DataSet ds;
+    public DataTable dt;
 
     public void ConnectDB()
     {
@@ -34,12 +36,8 @@ public class DBConnect
         }
     }
 
-    public DataTable getAllData(string sql)
-    {
-        da = new SqlDataAdapter(sql, conn);
-        DataTable dt = new DataTable();
-        da.Fill(dt);
-        return dt;
-    }
+    
+
+    
 
 }
