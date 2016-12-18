@@ -230,6 +230,8 @@ a, a:visited, a:active{
     margin-top:10px;
     width:100%;
     min-height:500px;
+    padding-left: 55px;
+    text-align:center;
 }
 
 

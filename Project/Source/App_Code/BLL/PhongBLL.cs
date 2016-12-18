@@ -16,4 +16,14 @@ public class PhongBll
     {
         return _phongDal.getAllData();
     }
+
+    public DataTable getTrangThai()
+    {
+        return _phongDal.getTrangThai();
+    }
+
+    public DataTable getAllDataByTrangThai(string TrangThai)
+    {
+        return _phongDal.getAllDataByTrangThai(TrangThai);
+    }
 }
