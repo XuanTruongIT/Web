@@ -48,7 +48,7 @@
 
                         </li>
                         <li>
-                            <asp:LinkButton ID="dangnhap" runat="server" data-toggle="modal" data-target="#login-modal" OnClick="dangnhap_Click" >Đăng nhập</asp:LinkButton>
+                            <asp:LinkButton ID="dangnhap" runat="server"  OnClick="dangnhap_Click" >Đăng nhập</asp:LinkButton>
 
                         </li>
                         <li>

@@ -31,7 +31,7 @@ public partial class MasterPage : System.Web.UI.MasterPage
     protected void dangxuat_Click(object sender, EventArgs e)
     {
         Session["account"] = "";
-        Page.Response.Redirect(Page.Request.Url.ToString(), true);
+        Response.Redirect("TrangChu.aspx");
     }
 
     protected void dangnhap_Click(object sender, EventArgs e)
