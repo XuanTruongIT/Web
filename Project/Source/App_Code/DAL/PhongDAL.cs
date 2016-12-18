@@ -5,16 +5,14 @@ using System.Web;
 using System.Data;
 using System.Data.SqlClient;
 
-
-
 /// <summary>
 /// Summary description for PhongDal
 /// </summary>
 public class PhongDal:DBConnect
 {
-    DBConnect db = new DBConnect();
     
-   
+
+
 
     public DataTable getAllData()
     {
@@ -30,7 +28,7 @@ public class PhongDal:DBConnect
     {
         ConnectDB();
         string sql = @"SELECT TrangThai FROM Phong GROUP BY TrangThai";
-        da = new SqlDataAdapter(sql,conn);
+        da = new SqlDataAdapter(sql, conn);
         dt = new DataTable();
         da.Fill(dt);
         return dt;
@@ -54,6 +52,4 @@ public class PhongDal:DBConnect
             CloseConnect();
         }
     }
-
-
 }
