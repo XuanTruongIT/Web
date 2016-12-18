@@ -11,7 +11,7 @@ public partial class Default3 : System.Web.UI.Page
     {
         if (!IsPostBack)
         {
-            //Response.Write(Session["account"].ToString());
+            
         }
     }
 
