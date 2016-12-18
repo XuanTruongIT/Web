@@ -199,6 +199,7 @@ a, a:visited, a:active{
 }
     #lienhe > ul > li > h2 {
         margin-top: 10px;
+        color:white !important;
     }
 #thongtin{
     clear:both;

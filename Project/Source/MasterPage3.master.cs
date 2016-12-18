@@ -12,14 +12,17 @@ public partial class MasterPage3 : System.Web.UI.MasterPage
     {
         if (!IsPostBack)
         {
+            
             if (Session["account"] == null || Session["account"].ToString() == "")
             {
+                lblAcc.Text = "";
                 dangnhap.Visible = true;
                 dangxuat.Visible = false;
             }
             else
             {
-                lblAcc.Text = "Xin chào, " + Session["account"].ToString();
+                string acc = Session["account"].ToString();
+                lblAcc.Text = "Xin chào, " + acc;
                 dangnhap.Visible = false;
                 dangxuat.Visible = true;
             }
@@ -40,19 +43,19 @@ public partial class MasterPage3 : System.Web.UI.MasterPage
             Session["account"] = Name;
             if (_accountBll.PhanQuyen(Name) == 1)
             {
-                lblAcc.Text = "Xin chào, " + Session["account"].ToString();
+                lblAcc.Text = "Xin chào, " + Name;
                 
             }
             else if (_accountBll.PhanQuyen(Name) == 2)
             {
-                lblAcc.Text = "Xin chào, " + Session["account"].ToString();
+                lblAcc.Text = "Xin chào, " + Name;
                 
             }
             Page.Response.Redirect(Page.Request.Url.ToString(), true);
         }
         else
         {
-            Response.Write("False");
+            Response.Write("<script>alert('Tài khoản không tồn tại')</script>");
         }
         
     }

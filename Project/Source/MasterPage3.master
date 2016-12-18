@@ -21,7 +21,6 @@
 </head>
 <body>
     <form id="form1" runat="server">
-
         <!-- Fixed navbar -->
         <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
@@ -37,9 +36,9 @@
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav ">
                         <li class="active"><a href="#">Trang chủ</a></li>
-                        <li><a href="#about">Phòng ở</a></li>
-                        <li><a href="#contact">Liên hệ</a></li>
-                        <li><a href="#gioithieu">Giới thiệu</a></li>
+                        <li><a href="#">Phòng ở</a></li>
+                        <li><a href="#">Liên hệ</a></li>
+                        <li><a href="#">Giới thiệu</a></li>
 
 
 
@@ -47,7 +46,7 @@
                     <ul class="nav navbar-nav navbar-right">
                         <%--<li><a id="dn" href="#" data-toggle="modal" data-target="#login-modal">Đăng nhập</a></li>
                         <li><a id="dx" href="#" data-toggle="modal" data-target="#login-modal">Đăng xuất</a></li>--%>
-                        <li>
+                        <li style="margin-top:15px;">
                             <asp:Label ID="lblAcc" runat="server" Text="" ForeColor="White"></asp:Label>
 
                         </li>
@@ -71,7 +70,8 @@
             <div class="modal-dialog">
                 <div class="loginmodal-container">
                     <h1>Login to Your Account</h1>
-                    <br>
+                    <center><asp:Label ID="lblStt" runat="server" Text="" ForeColor="Red" ></asp:Label></center>
+                    <br />
                     <form>
                         <%--<input type="text" name="user" id="txtName" placeholder="Username" runat="server"/>
                         <input type="password" name="pass" id="txtPass" placeholder="Password" runat="server"/>
@@ -155,7 +155,7 @@
             <div id="lienhe">
                 <ul>
                     <li>
-                        <h2>MẠNG XÃ HỘI</h2>
+                        <h2 style="color:white;">MẠNG XÃ HỘI</h2>
                     </li>
                     <li><a href="#">
                         <img src="Images/facebook.png" width="40" /></a></li>
@@ -183,6 +183,15 @@
                 interval: 2000
             })
 
+        </script>
+
+        <script>
+            $(document).ready(function () {
+                $('ul.nav li ').click(function () {
+                    $('li ').removeClass("active");
+                    $(this).addClass("active");
+                });
+            });
         </script>
 
 
