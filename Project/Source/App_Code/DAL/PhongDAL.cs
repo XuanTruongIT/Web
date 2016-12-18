@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 
 
 /// <summary>
-/// Summary description for PhongDAL
+/// Summary description for PhongDal
 /// </summary>
 public class PhongDal:DBConnect
 {

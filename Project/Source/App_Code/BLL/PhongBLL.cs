@@ -6,7 +6,7 @@ using System.Data;
 using System.Data.SqlClient;
 
 /// <summary>
-/// Summary description for PhongBLL
+/// Summary description for PhongBll
 /// </summary>
 public class PhongBll
 {

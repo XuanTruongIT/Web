@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 
 /// <summary>
-/// Summary description for PhongDAO
+/// Summary description for PhongDao
 /// </summary>
 public class PhongDao
 {
