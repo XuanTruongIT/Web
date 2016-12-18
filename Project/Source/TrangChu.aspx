@@ -6,22 +6,63 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server" >
     <link href="CSS/Trangchu.css" rel="stylesheet" />
    <div id="tieude">
-       <h1>Welcome to Royal Hotel!</h1> 
-    <h2>CHÀO MỪNG QUÝ KHÁCH ĐẾN VỚI KHÁCH SẠN ROYAL HÀ NỘI</h2> 
+        <h1 id="wc">Welcome to Royal Hotel!</h1> 
+        <h2 id="cm">CHÀO MỪNG QUÝ KHÁCH ĐẾN VỚI KHÁCH SẠN ROYAL HÀ NỘI</h2> 
    </div>
 
    <div id="noidung">
        <ul class="">
          <li id="room"> 
-             <img class="anh" src="Images/room.jpg"  width="300" height="300"/>
              <a href="#">
-                 <div class="">
+                 <div class="w">
                      <div class="content_icon">
                          <div class="icon">
-                             <img src="Images/ic_date_range_white_24dp_2x.png" />
+                             <img src="Images/phong.png" />  
                          </div>
                          <div class="title">
                              PHÒNG Ở
+                         </div>
+                     </div>
+                 </div>
+             </a>
+        </li>
+           <li id="note"> 
+             <a href="#">
+                 <div class="w">
+                     <div class="content_icon">
+                         <div class="icon">
+                             <img src="Images/thongbao.png" />
+                         </div>
+                         <div class="title">
+                             THÔNG BÁO
+                         </div>
+                     </div>
+                 </div>
+             </a>
+        </li>
+            <li id="gioithieu"> 
+             <a href="#">
+                 <div class="w">
+                     <div class="content_icon">
+                         <div class="icon">
+                             <img src="Images/gioithieu.png" />                           
+                         </div>
+                         <div class="title">
+                             GIỚI THIỆU
+                         </div>
+                     </div>
+                 </div>
+             </a>
+        </li>
+           <li id="sukien"> 
+             <a href="#">
+                 <div class="w">
+                     <div class="content_icon">
+                         <div class="icon">
+                             <img src="Images/sukien.png" />                            
+                         </div>
+                         <div class="title">
+                             SỰ KIỆN
                          </div>
                      </div>
                  </div>
