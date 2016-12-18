@@ -1,7 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage3.master.cs" Inherits="MasterPage3" %>
-
-
-
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
 
 <!DOCTYPE html>
 
@@ -36,7 +33,7 @@
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav ">
                         <li class="active"><a href="#">Trang chủ</a></li>
-                        <li><a href="Default.aspx">Phòng ở</a></li>
+                        <li><a href="#">Phòng ở</a></li>
                         <li><a href="#">Liên hệ</a></li>
                         <li><a href="#">Giới thiệu</a></li>
 
@@ -51,7 +48,7 @@
 
                         </li>
                         <li>
-                            <asp:LinkButton ID="dangnhap" runat="server" data-toggle="modal" data-target="#login-modal" >Đăng nhập</asp:LinkButton>
+                            <asp:LinkButton ID="dangnhap" runat="server" data-toggle="modal" data-target="#login-modal" OnClick="dangnhap_Click" >Đăng nhập</asp:LinkButton>
 
                         </li>
                         <li>
@@ -64,27 +61,7 @@
         </nav>
 
 
-        <%--Modal popup--%>
-
-        <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
-            <div class="modal-dialog">
-                <div class="loginmodal-container">
-                    <h1>Login to Your Account</h1>
-                    <center><asp:Label ID="lblStt" runat="server" Text="" ForeColor="Red" ></asp:Label></center>
-                    <br />
-                    <form>
-                        <%--<input type="text" name="user" id="txtName" placeholder="Username" runat="server"/>
-                        <input type="password" name="pass" id="txtPass" placeholder="Password" runat="server"/>
-                        <input type="submit" name="login" class="login loginmodal-submit" value="Login" id="btnLogin" runat="server" onserverclick="btnLogin_ServerClick"/>--%>
-                        <asp:TextBox ID="txtName" runat="server" placeholder="Username" required="required"></asp:TextBox>
-                        <asp:TextBox ID="txtPass" runat="server" placeholder="Password" TextMode="Password" required="required"></asp:TextBox>
-                        <asp:Button ID="btnLogin" CssClass="login loginmodal-submit" runat="server" Text="Login" OnClick="btnLogin_ServerClick"  />
-                    </form>
-                </div>
-            </div>
-        </div>
-
-        <%--/.Modal popup--%>
+        
 
 
 
