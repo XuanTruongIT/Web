@@ -91,8 +91,7 @@ public partial class _Default : System.Web.UI.Page
         if (e.CommandName=="Chon")
         {
             Session["MaP"] = e.CommandArgument.ToString();
-            Response.Redirect("ChiTietDatPhong.aspx");
-
+       
         }
         
     }

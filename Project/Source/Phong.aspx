@@ -1,10 +1,14 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Phong.aspx.cs" Inherits="_Default" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-
+    <link href="CSS/Phong.css" rel="stylesheet" />
     <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
         <ContentTemplate>
+            <br/>
+            <h1 id="dsks"> DANH SÁCH PHÒNG TRONG KHÁCH SẠN </h1>
+            <br/>
+            Tùy chọn 
 
             <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" Width="150px">
                 <asp:ListItem Value="1">Loại phòng</asp:ListItem>

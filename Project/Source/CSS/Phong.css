@@ -1,0 +1,16 @@
+﻿body {
+}
+#dsks{
+    color: #147eb9;
+    font-family: 'Raleway', sans-serif;
+}
+#btnthem {
+    font-family:'Adobe Gurmukhi';
+    color:#ffffff;
+    border-radius:20px;
+    font-size:25px;
+    border:0px hidden #808080;
+    background-size: cover;
+    background-position: center;
+    background-image: url('../Images/btn.png');
+}
