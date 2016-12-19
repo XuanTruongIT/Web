@@ -39,8 +39,9 @@ public partial class QLPhong : System.Web.UI.Page
     protected void LinkButton1_Command(object sender, CommandEventArgs e)
     {
         Session["RoomID"] = e.CommandArgument.ToString();
-        _phongDao.MaP = int.Parse(Session["RoomID"].ToString());
-        _phongBll.XoaPhong(_phongDao);
+        //_phongDao.MaP = int.Parse(Session["RoomID"].ToString());
+        //_phongBll.XoaPhong(_phongDao);
+        Response.Write(Session["RoomID"]);
         
 
      }

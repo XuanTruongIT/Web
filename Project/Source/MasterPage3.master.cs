@@ -59,7 +59,7 @@ public partial class MasterPage3 : System.Web.UI.MasterPage
         }
         else
         {
-            Response.Write("<script>alert('Tài khoản không tồn tại')</script>");
+            Response.Write("<script>alert('Tài khoản không đúng')</script>");
         }
         
     }
