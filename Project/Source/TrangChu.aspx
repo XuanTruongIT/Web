@@ -13,7 +13,7 @@
    <div id="noidung">
        <ul class="">
          <li id="room"> 
-             <a href="#">
+             <a href="Phong.aspx">
                  <div class="w">
                      <div class="content_icon">
                          <div class="icon">
@@ -27,7 +27,7 @@
              </a>
         </li>
            <li id="note"> 
-             <a href="#">
+             <a href="Thongbao.aspx">
                  <div class="w">
                      <div class="content_icon">
                          <div class="icon">
@@ -41,7 +41,7 @@
              </a>
         </li>
             <li id="gioithieu"> 
-             <a href="#">
+             <a href="Gioithieu.aspx">
                  <div class="w">
                      <div class="content_icon">
                          <div class="icon">
@@ -55,7 +55,7 @@
              </a>
         </li>
            <li id="sukien"> 
-             <a href="#">
+             <a href="Sukien.aspx">
                  <div class="w">
                      <div class="content_icon">
                          <div class="icon">
