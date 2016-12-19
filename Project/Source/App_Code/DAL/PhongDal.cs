@@ -101,7 +101,7 @@ public class PhongDal : DBConnect
         {
             ConnectDB();
             OpenConnect();
-            string sqlDelete = "DELETE FROM Phong WHERE @MaP=@MaP";
+            string sqlDelete = "DELETE FROM Phong WHERE MaP=@MaP";
             cmd = new SqlCommand(sqlDelete, conn);
             cmd.Parameters.AddWithValue("MaP", _phongDao.MaP);
             cmd.ExecuteNonQuery();

@@ -15,7 +15,22 @@ public partial class QLPhong : System.Web.UI.Page
         GridView1.DataBind();
     }
 
-    protected void Button1_Click(object sender, EventArgs e)
+   
+    
+
+    protected void lbtnXoa_Command1(object sender, CommandEventArgs e)
+    {
+        if (e.CommandName == "del")
+        {
+            int MaP = int.Parse(e.CommandArgument.ToString());
+            _phongDao.MaP = MaP;
+            _phongBll.XoaPhong(_phongDao);
+            Response.Write("<script>alert('Xóa thành công')</script>");
+            Response.AddHeader("refresh", "2;url=QLPhong.aspx");
+        }
+    }
+
+    protected void btnThem_Click(object sender, EventArgs e)
     {
         if (Page.IsValid && FileUpload1.HasFile)
         {
@@ -29,21 +44,20 @@ public partial class QLPhong : System.Web.UI.Page
             _phongDao.Anh = fileName.ToString();
             _phongDao.Gia = float.Parse(TextBox5.Text);
             _phongBll.ThemPhong(_phongDao);
+            Response.Write("<script>alert('Thêm thành công')</script>");
+            Response.AddHeader("refresh", "2;url=QLPhong.aspx");
         }
         else
         {
             Response.Write("Lỗi");
         }
     }
-
-    protected void LinkButton1_Command(object sender, CommandEventArgs e)
-    {
-        Session["RoomID"] = e.CommandArgument.ToString();
-        //_phongDao.MaP = int.Parse(Session["RoomID"].ToString());
-        //_phongBll.XoaPhong(_phongDao);
-        Response.Write(Session["RoomID"]);
-        
-
-     }
-    
 }
+
+
+
+
+
+
+
+    

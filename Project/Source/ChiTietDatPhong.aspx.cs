@@ -16,14 +16,14 @@ public partial class ChiTietDatPhong : System.Web.UI.Page
     HoaDonDao _hoaDonDao = new HoaDonDao();
     protected void Page_Load(object sender, EventArgs e)
     {
-        
+
     }
 
 
     protected void btnDatPhong_Click(object sender, EventArgs e)
     {
-        //try
-        //{
+        try
+        {
             string MaP = Session["MaP"].ToString();
 
             //
@@ -61,24 +61,23 @@ public partial class ChiTietDatPhong : System.Web.UI.Page
             _hoaDonBll.ThemHoaDon(_hoaDonDao);
 
 
-        //
+            //
 
 
 
-        Response.Write(gia);
-        Response.Write(ThanhTien);
 
-        //Response.Write("<script>alert('Đặt phòng thành công')</script>");
-        //Response.AddHeader("refresh", "3;url=TrangChu.aspx");
 
-        //}
-        //catch (Exception ex)
-        //{
+            Response.Write("<script>alert('Đặt phòng thành công')</script>");
+            Response.AddHeader("refresh", "3;url=TrangChu.aspx");
 
-        //Response.Write("Lỗi :- " + ex.Message);
-        //Response.Write("<script>alert('Đặt phòng thất bại')</script>");
-        //Response.AddHeader("refresh", "3;url=ChiTietDatPhong.aspx");
+        }
+        catch (Exception ex)
+        {
 
-        //    }
+            Response.Write("Lỗi :- " + ex.Message);
+            Response.Write("<script>alert('Đặt phòng thất bại')</script>");
+            Response.AddHeader("refresh", "3;url=ChiTietDatPhong.aspx");
+
+        }
     }
 }

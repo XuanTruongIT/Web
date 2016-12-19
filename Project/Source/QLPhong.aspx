@@ -38,7 +38,7 @@
             </tr>
         </table>
         <br /><br />
-        <asp:Button ID="Button1" runat="server" Text="Thêm" OnClick="Button1_Click" />
+        <asp:Button ID="btnThem" runat="server" Text="Thêm" OnClick="btnThem_Click" />
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Button ID="Button2" runat="server" Text="Sửa" />
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -60,11 +60,13 @@
                     <ItemStyle Height="80px" Width="100px" />
                 </asp:ImageField>
                 <asp:BoundField DataField="Gia" HeaderText="Giá" />
-                <asp:TemplateField HeaderText="Xóa" ShowHeader="False">
+                
+                <asp:TemplateField HeaderText="Xóa">
                     <ItemTemplate>
-                        <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="False" CommandName="Delete" Text="Xóa" CommandArgument='<%# Eval("MaP") %>' OnClientClick="return confirm('Are you sure')" OnCommand="LinkButton1_Command"></asp:LinkButton>
+                        <asp:LinkButton ID="lbtnXoa" runat="server" CommandArgument='<%# Eval("MaP") %>' CommandName="del" OnCommand="lbtnXoa_Command1" OnClientClick="return confirm('Are you sue ?')">Xóa</asp:LinkButton>
                     </ItemTemplate>
                 </asp:TemplateField>
+                
             </Columns>
             <EditRowStyle BackColor="#999999" />
             <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
