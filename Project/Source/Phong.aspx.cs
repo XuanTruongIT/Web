@@ -73,6 +73,7 @@ public partial class _Default : System.Web.UI.Page
         {
             Session["Gia"] = DropDownList2.SelectedValue.ToString();
             DataList1.DataSourceID = "DBPhong2";
+            
             //AnHienButton();
 
         }
@@ -91,7 +92,7 @@ public partial class _Default : System.Web.UI.Page
         if (e.CommandName=="Chon")
         {
             Session["MaP"] = e.CommandArgument.ToString();
-       
+            Response.Redirect("ChiTietDatPhong.aspx");
         }
         
     }

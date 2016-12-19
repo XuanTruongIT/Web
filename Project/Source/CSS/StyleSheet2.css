@@ -231,7 +231,7 @@ a, a:visited, a:active{
     width:100%;
     min-height: 500px;
     padding-left: 55px;
-    text-align:center;
+    /*text-align:center;*/
 }
 
 
@@ -334,5 +334,8 @@ a, a:visited, a:active{
 .login-help{
   font-size: 12px;
 }
-
+#formdatphong{
+    min-width:40%;
+    padding:15%;
+}
 /*End login*/

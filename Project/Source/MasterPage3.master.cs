@@ -43,7 +43,7 @@ public partial class MasterPage3 : System.Web.UI.MasterPage
             Session["account"] = Name;
             if (_accountBll.PhanQuyen(Name) == 1)
             {
-                Server.Transfer("Admin.aspx");
+                Response.Redirect("Admin.aspx");
                 
             }
             else if (_accountBll.PhanQuyen(Name) == 2)
