@@ -33,7 +33,16 @@
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav ">
                         <li class="active"><a href="#">Trang chủ</a></li>
-                        <li><a href="#">Phòng ở</a></li>
+                         <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Phòng ở <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Phòng đơn</a></li>
+                                <li><a href="#">Phòng đôi</a></li>
+                                <li><a href="#">Phòng VIP</a></li>
+                                <li><a href="#">Tất cả phòng</a></li>
+
+                            </ul>
+                        </li>
                         <li><a href="#">Liên hệ</a></li>
                         <li><a href="#">Giới thiệu</a></li>
 

@@ -43,14 +43,15 @@ public partial class MasterPage3 : System.Web.UI.MasterPage
             Session["account"] = Name;
             if (_accountBll.PhanQuyen(Name) == 1)
             {
-                lblAcc.Text = "Xin chào, " + Name;
+               
                 
             }
             else if (_accountBll.PhanQuyen(Name) == 2)
             {
-                lblAcc.Text = "Xin chào, " + Name;
+                
                 
             }
+            lblAcc.Text = "Xin chào, " + Name;
             Page.Response.Redirect(Page.Request.Url.ToString(), true);
         }
         else
