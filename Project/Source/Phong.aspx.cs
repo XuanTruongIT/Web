@@ -65,7 +65,7 @@ public partial class _Default : System.Web.UI.Page
         {
             Session["MaLP"] = DropDownList2.SelectedValue.ToString();
             DataList1.DataSourceID = "DBPhong1";
-            AnHienButton();
+            //AnHienButton();
 
 
         }
@@ -73,14 +73,14 @@ public partial class _Default : System.Web.UI.Page
         {
             Session["Gia"] = DropDownList2.SelectedValue.ToString();
             DataList1.DataSourceID = "DBPhong2";
-            AnHienButton();
+            //AnHienButton();
 
         }
         else
         {
             Session["TrangThai"] = DropDownList2.SelectedValue.ToString();
             DataList1.DataSourceID = "DBPhong3";
-            AnHienButton();
+            //AnHienButton();
 
         }
         
