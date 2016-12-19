@@ -26,4 +26,12 @@ public class PhongBll
     {
         return _phongDal.getAllDataByTrangThai(TrangThai);
     }
+    public void ThemPhong(PhongDao _phongDao)
+    {
+        _phongDal.ThemPhong(_phongDao);
+    }
+    public void UpdateTrangThai(string MaP)
+    {
+        _phongDal.UpdateTrangThai(MaP);
+    }
 }

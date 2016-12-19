@@ -52,4 +52,79 @@ public class PhongDal : DBConnect
             CloseConnect();
         }
     }
+    public void ThemPhong(PhongDao _phongDao)
+    {
+        try
+        {
+            ConnectDB();
+            OpenConnect();
+            string sqlInsert = "INSERT INTO Phong VALUES(@TenP,@TrangThai,@MaLP,@Anh,@Gia)";
+            cmd = new SqlCommand(sqlInsert, conn);
+            cmd.Parameters.AddWithValue("TenP", _phongDao.TenP);
+            cmd.Parameters.AddWithValue("TrangThai", _phongDao.TrangThai);
+            cmd.Parameters.AddWithValue("MaLP", _phongDao.MaLP);
+            cmd.Parameters.AddWithValue("Anh", _phongDao.Anh);
+            cmd.Parameters.AddWithValue("Gia", _phongDao.Gia);
+            cmd.ExecuteNonQuery();
+        }
+        finally
+        {
+            CloseConnect();
+        }
+       
+       
+    }
+    public void UpdatePhong(PhongDao _phongDao)
+    {
+        try
+        {
+            ConnectDB();
+            OpenConnect();
+            string sqlUpdate = "UPDATE Phong SET(TenP=@TenP,TrangThai=@TrangThai,MaLP=@MaLP,Gia=@Gia) WHERE @MaP=@MaP";
+            cmd = new SqlCommand(sqlUpdate, conn);
+            cmd.Parameters.AddWithValue("MaP", _phongDao.MaP);
+            cmd.Parameters.AddWithValue("TenP", _phongDao.TenP);
+            cmd.Parameters.AddWithValue("TrangThai", _phongDao.TrangThai);
+            cmd.Parameters.AddWithValue("MaLP", _phongDao.MaLP);
+            cmd.Parameters.AddWithValue("Anh", _phongDao.Anh);
+            cmd.Parameters.AddWithValue("Gia", _phongDao.Gia);
+            cmd.ExecuteNonQuery();
+        }
+        finally
+        {
+            CloseConnect();
+        }
+    }
+    public void DeletePhong(PhongDao _phongDao)
+    {
+        try
+        {
+            ConnectDB();
+            OpenConnect();
+            string sqlDelete = "DELETE FROM Phong WHERE @MaP=@MaP";
+            cmd = new SqlCommand(sqlDelete, conn);
+            cmd.Parameters.AddWithValue("MaP", _phongDao.MaP);
+            cmd.ExecuteNonQuery();
+        }
+        finally
+        {
+            CloseConnect();
+        }
+    }
+    public void UpdateTrangThai(string MaP)
+    {
+        try
+        {
+            ConnectDB();
+            OpenConnect();
+            string sqlUpdate = @"UPDATE Phong SET TrangThai = N'Đã thuê' WHERE MaP = @MaP ";
+            cmd = new SqlCommand(sqlUpdate, conn);
+            cmd.Parameters.AddWithValue("MaP", MaP);
+            cmd.ExecuteNonQuery();
+        }
+        finally
+        {
+            CloseConnect();
+        }
+    }
 }
