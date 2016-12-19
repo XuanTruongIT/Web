@@ -34,4 +34,8 @@ public class PhongBll
     {
         _phongDal.UpdateTrangThai(MaP);
     }
+    public void XoaPhong(PhongDao _phongDao)
+    {
+        _phongDal.DeletePhong(_phongDao);
+    }
 }

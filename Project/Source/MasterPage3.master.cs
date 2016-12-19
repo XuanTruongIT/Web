@@ -38,16 +38,19 @@ public partial class MasterPage3 : System.Web.UI.MasterPage
         string Name = txtName.Text;
         string Pass = txtPass.Text;
         Session["account"] = "";
+        Session["quyen"] = "";
         if (_accountBll.TaiKhoan(Name,Pass)>0)
         {
             Session["account"] = Name;
             if (_accountBll.PhanQuyen(Name) == 1)
             {
+                Session["quyen"] = 1;
                 Response.Redirect("Admin.aspx");
                 
             }
             else if (_accountBll.PhanQuyen(Name) == 2)
             {
+                Session["quyen"] = 2;
                 Response.Redirect("TrangChu.aspx");
                 
             }

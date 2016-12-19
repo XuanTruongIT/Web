@@ -9,6 +9,13 @@ public partial class Admin : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        if (!IsPostBack)
+        {
+            
+            if (Session["quyen"] == null || (int)Session["quyen"] != 1)
+            {
+                Response.Redirect("TrangChu.aspx");
+            }
+        }
     }
 }
