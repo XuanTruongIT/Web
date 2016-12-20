@@ -38,10 +38,23 @@ public partial class ChiTietDatPhong : System.Web.UI.Page
 
             //
 
+            /*Nhập ngày*/
+            DateTime ngayden = DateTime.Parse(txtNgayDen.Text);
+            DateTime ngaydi = DateTime.Parse(txtNgayDi.Text);
+            DateTime ngayhientai = DateTime.Now.AddDays(-1);
+            if (ngayden >= ngayhientai && ngaydi > ngayhientai && ngaydi > ngayden)
+            {
+                _datPhongDao.NgayDen = ngayden;
+                _datPhongDao.NgayDi = ngaydi;
+            }
+            else
+            {
+                Response.Write("<script>alert('Nhập ngày không đúng!')</script>");
+            }
+            //Kết thúc
             _datPhongDao.MaP = int.Parse(MaP.ToString());
             _datPhongDao.MaKH = _datPhongBll.LayMaKH();
-            _datPhongDao.NgayDen = DateTime.Parse(txtNgayDen.Text);
-            _datPhongDao.NgayDi = DateTime.Parse(txtNgayDi.Text);
+
             _datPhongBll.DatPhong(_datPhongDao);
             _phongBll.UpdateTrangThai(MaP.ToString());
 
@@ -62,10 +75,6 @@ public partial class ChiTietDatPhong : System.Web.UI.Page
 
 
             //
-
-
-
-
 
             Response.Write("<script>alert('Đặt phòng thành công')</script>");
             Response.AddHeader("refresh", "2;url=QlHoaDon.aspx");
