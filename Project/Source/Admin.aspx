@@ -6,7 +6,6 @@
         <h1 id="wc1">Xin chào, Admin</h1> 
         <h2 id="cm1">Quản lý thông tin</h2> 
    </div>
-
    <div id="noidung">
        <ul class="">
          <li id="qlroom"> 

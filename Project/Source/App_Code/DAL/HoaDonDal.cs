@@ -83,7 +83,49 @@ public class HoaDonDal:DBConnect
             CloseConnect();
         }
     }
+    public DataTable HienThiHoaDonTheoTen(string tenkh)
+    {
+        try
+        {
+            ConnectDB();
+            OpenConnect();
+            string sql = "SELECT HoaDon.MaHD , KhachHang.TenKH ,";
+            sql += "Phong.TenP , Phong.Gia , ThuePhong.NgayDen , ";
+            sql += "ThuePhong.NgayDi ,HoaDon.NgayLap  , HoaDon.ThanhTien ";
+            sql += " FROM HoaDon INNER JOIN ThuePhong ON HoaDon.MaTP = ThuePhong.MaTP INNER JOIN KhachHang ON ThuePhong.MaKH = KhachHang.MaKH";
+            sql += " INNER JOIN Phong ON ThuePhong.MaP = Phong.MaP WHERE KhachHang.TenKH LIKE '%" + tenkh + "%'";
+            cmd = new SqlCommand(sql, conn);
+            cmd.Parameters.AddWithValue("TenKH", tenkh);
+            dt = new DataTable();
+            dt.Load(cmd.ExecuteReader());
+            return dt;
+        }
+        finally
+        {
+            CloseConnect();
+        }
+    }
 
-
-
+    public DataTable HienThiHoaDon()
+    {
+        try
+        {
+            ConnectDB();
+            OpenConnect();
+            string sql = "SELECT HoaDon.MaHD , KhachHang.TenKH ,";
+            sql += "Phong.TenP , Phong.Gia , ThuePhong.NgayDen, ";
+            sql += "ThuePhong.NgayDi ,HoaDon.NgayLap  , HoaDon.ThanhTien ";
+            sql += " FROM HoaDon INNER JOIN ThuePhong ON HoaDon.MaTP = ThuePhong.MaTP INNER JOIN KhachHang ON ThuePhong.MaKH = KhachHang.MaKH";
+            sql += " INNER JOIN Phong ON ThuePhong.MaP = Phong.MaP ";
+            
+            cmd = new SqlCommand(sql, conn);
+            dt = new DataTable();
+            dt.Load(cmd.ExecuteReader());
+            return dt;
+        }
+        finally
+        {
+            CloseConnect();
+        }
+    }
 }

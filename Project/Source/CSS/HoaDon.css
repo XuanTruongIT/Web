@@ -1,0 +1,23 @@
+﻿#danhsachhd{
+    width:70%;
+    margin-left:15%;
+    color:blueviolet;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:16px;
+}
+#ContentPlaceHolder1_btntimkiem {
+    border-radius: 15px;
+    color:white;
+    background-position:center;
+    background-size:cover;
+    background-image: url('../Images/btn.png');
+}
+#ContentPlaceHolder1_txtSearch{
+    border-radius:2px;
+    box-shadow:2px 2px 2px aqua;
+    color:red;
+    
+}
+#ContentPlaceHolder1_GridView1{
+    margin-top:70px;
+}

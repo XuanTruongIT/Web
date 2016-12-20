@@ -68,7 +68,7 @@ public partial class ChiTietDatPhong : System.Web.UI.Page
 
 
             Response.Write("<script>alert('Đặt phòng thành công')</script>");
-            Response.AddHeader("refresh", "3;url=TrangChu.aspx");
+            Response.AddHeader("refresh", "2;url=QlHoaDon.aspx");
 
         }
         catch (Exception ex)

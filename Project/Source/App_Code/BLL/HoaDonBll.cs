@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 
@@ -25,5 +26,13 @@ public class HoaDonBll
     public float getGia(string MaP)
     {
         return _hoaDonDal.getGia(MaP);
+    }
+    public DataTable hienThitheoTen(string tenKH)
+    {
+        return _hoaDonDal.HienThiHoaDonTheoTen(tenKH);
+    }
+    public DataTable HienThiHoaDon()
+    {
+        return _hoaDonDal.HienThiHoaDon();
     }
 }
