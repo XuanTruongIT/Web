@@ -5,7 +5,7 @@
      
     <p id="textsuanv">SỬA THÔNG TIN NHÂN VIÊN</p>
    <div id="suanhanvien">
-    <asp:FormView ID="FormView1" runat="server" DataKeyNames="MaNV" DataSourceID="SqlDataSource1" CellPadding="4" ForeColor="#333333" DefaultMode="Edit" OnItemCommand="Cancel_Click" OnItemUpdated="Updated_Click" Width="298px">
+    <asp:FormView ID="FormView1" runat="server" DataKeyNames="MaNV" DataSourceID="SqlDataSource1" CellPadding="4" ForeColor="#333333" DefaultMode="Edit" OnItemCommand="Cancel_Click" OnItemUpdated="Updated_Click" Width="297px">
         <EditItemTemplate>
             Mã nhân viên&nbsp;&nbsp;&nbsp; :
             <asp:Label ID="MaNVLabel1" runat="server" Text='<%# Eval("MaNV") %>' />
@@ -13,17 +13,23 @@
             Tên nhân viên&nbsp; :
             <asp:TextBox ID="TenNVTextBox" runat="server" Text='<%# Bind("TenNV") %>' />
             <br />
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Không được để trống" Font-Size="10pt" ForeColor="Red" ControlToValidate="TenNVTextBox" Display="Dynamic" EnableClientScript="False"></asp:RequiredFieldValidator>
+            <br />
             Giới tính&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :
             <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource2" DataTextField="GioiTinh" DataValueField="GioiTinh" Height="23px" SelectedValue='<%# Bind("GioiTinh") %>' Width="174px">
             </asp:DropDownList>
             <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:QuanLyKhachSanConnectionString %>" SelectCommand="SELECT GioiTinh FROM KhachHang GROUP BY GioiTinh"></asp:SqlDataSource>
             <br />
             CMTND&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :
-            <asp:TextBox ID="CMNDTextBox" runat="server" Text='<%# Bind("CMND") %>' />
+            <asp:TextBox ID="CMNDTextBox" runat="server" Text='<%# Bind("CMND") %>' type ="number"/>
+            <br />
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Không được để trống" Font-Size="10pt" ForeColor="Red" ControlToValidate="CMNDTextBox" Display="Dynamic" EnableClientScript="False"></asp:RequiredFieldValidator>
             <br />
             Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :
             <asp:TextBox ID="EmailTextBox" runat="server" Text='<%# Bind("Email") %>' />
             <br />
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Không được để trống" Font-Size="10pt" ForeColor="Red" ControlToValidate="EmailTextBox" Display="Dynamic" EnableClientScript="False"></asp:RequiredFieldValidator>
+            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="Nhập đúng định dạng mail" ControlToValidate="EmailTextBox" Display="Dynamic" EnableClientScript="False" Font-Size="10pt" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
             <br />
             <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Update" />
 &nbsp;&nbsp;&nbsp;&nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />

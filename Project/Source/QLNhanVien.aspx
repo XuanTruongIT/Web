@@ -34,16 +34,24 @@
             Tên nhân viên
             <asp:TextBox ID="TenNVTextBox" runat="server" Text='<%# Bind("TenNV") %>'/>
             <br />
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Không được để trống" Font-Size="10pt" ForeColor="Red" ControlToValidate="TenNVTextBox" Display="Dynamic" EnableClientScript="False"></asp:RequiredFieldValidator>
+            <br />
             Giới tính&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="GT" DataTextField="GioiTinh" DataValueField="GioiTinh" Height="35px" SelectedValue='<%# Bind("GioiTinh") %>' Width="250px">
             </asp:DropDownList>
             <asp:SqlDataSource ID="GT" runat="server" ConnectionString="<%$ ConnectionStrings:QuanLyKhachSanConnectionString %>" SelectCommand="SELECT GioiTinh FROM KhachHang GROUP BY GioiTinh"></asp:SqlDataSource>
             <br />
             CMND&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="CMNDTextBox" runat="server" Text='<%# Bind("CMND") %>' />
+            <asp:TextBox ID="CMNDTextBox" runat="server" Text='<%# Bind("CMND") %>' type="number"/>
+            <br />
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Không được để trống" Font-Size="10pt" ForeColor="Red" ControlToValidate="CMNDTextBox" Display="Dynamic" EnableClientScript="False"></asp:RequiredFieldValidator>
+
             <br />
             Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:TextBox ID="EmailTextBox" runat="server" Text='<%# Bind("Email") %>'/>
+            <br />
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Không được để trống" Font-Size="10pt" ForeColor="Red" ControlToValidate="EmailTextBox" Display="Dynamic" EnableClientScript="False"></asp:RequiredFieldValidator>
+            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="Nhập đúng định dạng mail" ControlToValidate="EmailTextBox" Display="Dynamic" EnableClientScript="False" Font-Size="10pt" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
             <br /><br /><br />
             <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Thêm nhân viên " />
              &nbsp; &nbsp; &nbsp; &nbsp;

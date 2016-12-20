@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
-    <asp:FormView ID="FormView1" runat="server" DataKeyNames="MaP" DataSourceID="SqlDataSource1" DefaultMode="Edit" OnItemUpdated="FormView1_ItemUpdated">
+    <asp:FormView ID="FormView1" runat="server" DataKeyNames="MaP" DataSourceID="SqlDataSource1" DefaultMode="Edit" OnItemUpdated="FormView1_ItemUpdated" OnItemCommand="Cancel_Click" Width="271px">
         <EditItemTemplate>
             <br />
             <table>
@@ -16,6 +16,9 @@
                     <td>Tên phòng: </td>
                     <td>
                         <asp:TextBox ID="TenPTextBox" runat="server" Text='<%# Bind("TenP") %>' />
+                        <br />
+                       <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Không được để trống" Font-Size="10pt" ForeColor="Red" ControlToValidate="TenPTextBox" Display="Dynamic" EnableClientScript="False"></asp:RequiredFieldValidator>
+
                     </td>
                 </tr>
                 <tr>
@@ -52,6 +55,9 @@
                     <td>Giá: </td>
                     <td>
                         <asp:TextBox ID="GiaTextBox" runat="server" Text='<%# Bind("Gia") %>' />
+                        <br />
+                         <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Không được để trống" Font-Size="10pt" ForeColor="Red" ControlToValidate="GiaTextBox" Display="Dynamic" EnableClientScript="False"></asp:RequiredFieldValidator>
+
                     </td>
                 </tr>
             </table>
@@ -74,7 +80,7 @@
             <asp:TextBox ID="AnhTextBox" runat="server" Text='<%# Bind("Anh") %>' />
             <br />
             Gia:
-            <asp:TextBox ID="GiaTextBox" runat="server" Text='<%# Bind("Gia") %>' />
+            <asp:TextBox ID="GiaTextBox" runat="server" Text='<%# Bind("Gia") %>' type ="number"/>
             <br />
             <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insert" />
             &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />

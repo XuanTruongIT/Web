@@ -11,9 +11,13 @@
         <InsertItemTemplate>
             Tên khách hàng:
             <asp:TextBox ID="TenKHTextBox" runat="server" Text='<%# Bind("TenKH") %>' />
+            <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Không được để trống" Font-Size="10pt" ForeColor="Red" ControlToValidate="TenKHTextBox" Display="Dynamic" EnableClientScript="False"></asp:RequiredFieldValidator>
             <br />
             CMND&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :
             <asp:TextBox ID="CMNDTextBox" runat="server" Text='<%# Bind("CMND") %>' />
+            <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Không được để trống" Font-Size="10pt" ForeColor="Red" ControlToValidate="CMNDTextBox" Display="Dynamic" EnableClientScript="False"></asp:RequiredFieldValidator>
             <br />
             Giới tính&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :
             <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="GioiTinh" DataTextField="GioiTinh" DataValueField="GioiTinh" Height="23px" SelectedValue='<%# Bind("GioiTinh") %>' Width="174px">
@@ -22,12 +26,19 @@
             <br />
             Địa chỉ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :
             <asp:TextBox ID="DiaChiTextBox" runat="server" Text='<%# Bind("DiaChi") %>' />
+            <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Không được để trống" Font-Size="10pt" ForeColor="Red" ControlToValidate="DiaChiTextBox" Display="Dynamic" EnableClientScript="False"></asp:RequiredFieldValidator>
             <br />
             Số điện thoại&nbsp;&nbsp;&nbsp; :
             <asp:TextBox ID="SoDTTextBox" runat="server" Text='<%# Bind("SoDT") %>' />
+            <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Không được để trống" Font-Size="10pt" ForeColor="Red" ControlToValidate="SoDTTextBox" Display="Dynamic" EnableClientScript="False"></asp:RequiredFieldValidator>
             <br />
             Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :
             <asp:TextBox ID="EmailTextBox" runat="server" Text='<%# Bind("Email") %>' />
+            <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="Không được để trống" Font-Size="10pt" ForeColor="Red" ControlToValidate="EmailTextBox" Display="Dynamic" EnableClientScript="False"></asp:RequiredFieldValidator>
+            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="Nhập đúng định dạng mail" ControlToValidate="EmailTextBox" Display="Dynamic" EnableClientScript="False" Font-Size="10pt" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
             <br />
             <br />
             <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Thêm khách hàng" />
@@ -94,7 +105,7 @@
 
     <br />
     
-   <p id="dskh_text"> ------------DANH SÁCH KHÁCH HÀNG---------------</p>
+   <p id="dskh_text"> ------------DANH SÁCH KHÁCH HÀNG----------------</p>
     <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" DataKeyNames="MaKH" DataSourceID="DBGridView" Width="777px" CellSpacing="2" Font-Size="15px">
         <Columns>
             <asp:BoundField DataField="MaKH" HeaderText="Mã khách hàng" InsertVisible="False" ReadOnly="True" SortExpression="MaKH" />

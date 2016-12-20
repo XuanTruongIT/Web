@@ -15,6 +15,10 @@ public partial class QLPhong : System.Web.UI.Page
         {
             GridView1.DataSource = _phongBll.getAllData();
             GridView1.DataBind();
+            if (Session["quyen"] == null || (int)Session["quyen"] != 1 || Session["quyen"].ToString() == "" || Session["account"] == null || Session["account"].ToString() == "")
+            {
+                Response.Redirect("TrangChu.aspx");
+            }
 
         }
 
@@ -117,6 +121,15 @@ public partial class QLPhong : System.Web.UI.Page
         }
     }
 
+
+
+    protected void Cancel_Click(object sender, FormViewCommandEventArgs e)
+    {
+        if (e.CommandName=="Cancel")
+        {
+            Response.Redirect("Admin.aspx");
+        }
+    }
 }
 
 

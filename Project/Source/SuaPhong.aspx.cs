@@ -44,4 +44,12 @@ public partial class _Default : System.Web.UI.Page
             Response.Write("<script>alert('Sửa thất bại')</script>");
         }
     }
+
+    protected void Cancel_Click(object sender, FormViewCommandEventArgs e)
+    {
+        if (e.CommandName=="Cancel")
+        {
+            Response.Redirect("QLPhong.aspx");
+        }
+    }
 }

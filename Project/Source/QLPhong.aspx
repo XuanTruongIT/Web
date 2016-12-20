@@ -7,7 +7,7 @@
         <h1>QUẢN LÝ THÔNG TIN PHÒNG</h1>
         <br />
         <br />
-        <asp:FormView ID="FormView1" runat="server" DataKeyNames="MaP" DataSourceID="SqlDataSource1" DefaultMode="Insert" OnItemInserted="FormView1_ItemInserted">
+        <asp:FormView ID="FormView1" runat="server" DataKeyNames="MaP" DataSourceID="SqlDataSource1" DefaultMode="Insert" OnItemInserted="FormView1_ItemInserted" OnItemCommand="Cancel_Click">
             <EditItemTemplate>
                 MaP:
                 <asp:Label ID="MaPLabel1" runat="server" Text='<%# Eval("MaP") %>' />
@@ -39,6 +39,8 @@
                         <td>Tên phòng: </td>
                         <td>
                             <asp:TextBox ID="TenPTextBox" runat="server" Text='<%# Bind("TenP") %>' />
+                            <br />
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Không được để trống" Font-Size="10pt" ForeColor="Red" ControlToValidate="TenPTextBox" Display="Dynamic" EnableClientScript="False"></asp:RequiredFieldValidator>
                         </td>
                     </tr>
                     <tr>
@@ -74,7 +76,10 @@
                     <tr>
                         <td>Giá: </td>
                         <td>
-                            <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("Gia") %>'></asp:TextBox>
+                            <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("Gia") %>' type="number"></asp:TextBox>
+                            <br />
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Không được để trống" Font-Size="10pt" ForeColor="Red" ControlToValidate="TextBox1" Display="Dynamic" EnableClientScript="False"></asp:RequiredFieldValidator>
+
                         </td>
                     </tr>
                     <tr>
@@ -105,6 +110,8 @@
                 <br />
                 Gia:
                 <asp:Label ID="GiaLabel" runat="server" Text='<%# Bind("Gia") %>' />
+                
+
                 <br />
                 <asp:LinkButton ID="EditButton" runat="server" CausesValidation="False" CommandName="Edit" Text="Edit" />
                 &nbsp;<asp:LinkButton ID="DeleteButton" runat="server" CausesValidation="False" CommandName="Delete" Text="Delete" />
