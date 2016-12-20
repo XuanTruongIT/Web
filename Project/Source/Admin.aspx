@@ -51,7 +51,7 @@
              </a>
         </li>
            <li id="qlthongke"> 
-             <a href="#">
+             <a href="QlHoaDon.aspx">
                  <div class="w">
                      <div class="content_icon">
                          <div class="icon">
