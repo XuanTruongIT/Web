@@ -10,7 +10,7 @@
    <div id="noidung">
        <ul class="">
          <li id="qlroom"> 
-             <a href="#">
+             <a href="QLPhong.aspx">
                  <div class="w">
                      <div class="content_icon">
                          <div class="icon">
@@ -24,7 +24,7 @@
              </a>
         </li>
            <li id="qlnhanvien"> 
-             <a href="#">
+             <a href="QLNhanVien.aspx">
                  <div class="w">
                      <div class="content_icon">
                          <div class="icon">
@@ -38,7 +38,7 @@
              </a>
         </li>
             <li id="qlkhachhang"> 
-             <a href="#">
+             <a href="QLKhachHang.aspx">
                  <div class="w">
                      <div class="content_icon">
                          <div class="icon">

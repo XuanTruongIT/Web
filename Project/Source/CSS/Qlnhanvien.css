@@ -1,0 +1,45 @@
+﻿body {
+    
+}
+#formnhanvien{
+    padding-top:10px;
+    padding-left:430px;
+}
+#dsthemnv{
+    padding-top:20px;
+    padding-left:350px;
+}
+#dsnhanvien_txt{
+    color:black;
+    font-size:25px;
+    font-weight:bold;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left:40px;
+}
+#qlnv_txt{
+    font-weight:bold;
+    text-align:center;
+    font-size:30px;
+    color:black;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#qlnhanvien_form {
+    margin-right:50px;
+    border-radius:20px;
+    background-position:center;
+    background-size:cover;
+    background-image: url('../Images/brown_hotel_wallpaper_by_fantasystock.jpg');
+}
+#suanhanvien{
+    padding-top:20px;
+    padding-left:500px;
+}
+#textsuanv{
+    padding-top:70px;
+    color:blue;
+    text-align:center;
+    font-size:25px;
+    font-weight:bold;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
