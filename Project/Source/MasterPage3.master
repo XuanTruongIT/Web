@@ -51,6 +51,11 @@
                         </li>--%>
                         <li><a href="Lienhe.aspx">Liên hệ</a></li>
                         <li><a href="Gioithieu.aspx">Giới thiệu</a></li>
+                        
+                        <li>
+                            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Admin.aspx">Quản lý</asp:HyperLink>
+
+                        </li>
 
 
 

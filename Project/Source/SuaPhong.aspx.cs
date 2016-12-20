@@ -37,7 +37,7 @@ public partial class _Default : System.Web.UI.Page
         if (e.AffectedRows == 1)
         {
             Response.Write("<script>alert('Sửa thành công')</script>");
-            Response.AddHeader("refresh", "3;url=QLPhong.aspx");
+            Response.AddHeader("refresh", "1;url=QLPhong.aspx");
         }
         else
         {

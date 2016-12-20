@@ -30,7 +30,7 @@ public partial class ChiTietDatPhong : System.Web.UI.Page
 
             _khachHangDao.TenKH = txtHoTen.Text;
             _khachHangDao.CMND = int.Parse(txtCMND.Text);
-            _khachHangDao.GioiTinh = txtGioiTinh.Text;
+            _khachHangDao.GioiTinh = DropDownList1.SelectedValue;
             _khachHangDao.DiaChi = txtDiaChi.Text;
             _khachHangDao.SDT = int.Parse(txtSDT.Text);
             _khachHangDao.Email = txtEmail.Text;

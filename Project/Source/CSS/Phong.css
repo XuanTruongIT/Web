@@ -27,3 +27,47 @@
     color:red;
     font-family:Cambria, Cochin, Georgia, Times, Times New Roman, serif;
 }
+#left_form{
+    padding-right:10px;
+    border-radius:10px;
+    float:left;
+    border:2px solid #808080;
+}
+#ndformqlp {
+    color:black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+}
+#qlttphong h1{
+    padding-top:15px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:30px;
+    color:blue;
+    text-align:center;
+}
+#qlttphong {
+    background-image: url('../Images/brown_hotel_wallpaper_by_fantasystock.jpg');
+    background-position:center;
+    background-size:cover;
+}
+#suaphong_txt{
+    padding-top:10px;
+    text-align:center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:30px;
+    color:blue;
+}
+#suaphong_form {
+    margin-right:20px;
+    border-radius:15px;
+    background-image: url('../Images/brown_hotel_wallpaper_by_fantasystock.jpg');
+    background-position:center;
+    background-size:cover;
+    padding-left: 500px;
+    border: 1px solid #808080;
+}
+#text_suaphong{
+    color:black;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:20px;
+}

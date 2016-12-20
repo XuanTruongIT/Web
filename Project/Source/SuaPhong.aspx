@@ -1,70 +1,82 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="SuaPhong.aspx.cs" Inherits="_Default" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-
-    <asp:FormView ID="FormView1" runat="server" DataKeyNames="MaP" DataSourceID="SqlDataSource1" DefaultMode="Edit" OnItemUpdated="FormView1_ItemUpdated" OnItemCommand="Cancel_Click" Width="271px">
+    <link href="CSS/Phong.css" rel="stylesheet" />
+    <p id="suaphong_txt">SỬA THÔNG TIN PHÒNG</p>
+    <div id="suaphong_form">
+    <asp:FormView ID="FormView1" runat="server" DataKeyNames="MaP" DataSourceID="SqlDataSource1" DefaultMode="Edit" OnItemUpdated="FormView1_ItemUpdated" OnItemCommand="Cancel_Click" Width="600px">
+       
+         
         <EditItemTemplate>
-            <br />
-            <table>
+           
+            <table id="text_suaphong">
                 <tr>
                     <td>Mã phòng: </td>
                     <td>
                         <asp:Label ID="MaPLabel1" runat="server" Text='<%# Eval("MaP") %>' />
                     </td>
                 </tr>
-                <tr>
-                    <td>Tên phòng: </td>
-                    <td>
-                        <asp:TextBox ID="TenPTextBox" runat="server" Text='<%# Bind("TenP") %>' />
-                        <br />
-                       <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Không được để trống" Font-Size="10pt" ForeColor="Red" ControlToValidate="TenPTextBox" Display="Dynamic" EnableClientScript="False"></asp:RequiredFieldValidator>
-
-                    </td>
-                </tr>
-                <tr>
-                    <td>Trạng thái: </td>
-                    <td>
-                        <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="TrangThai" DataValueField="TrangThai" SelectedValue='<%# Bind("TrangThai") %>' Width="175px">
-                        </asp:DropDownList>
-                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:QuanLyKhachSanConnectionString %>" SelectCommand="SELECT TrangThai FROM Phong GROUP BY TrangThai"></asp:SqlDataSource>
-                    </td>
-                </tr>
-                <tr>
-                    <td style="height: 20px">Mã loại phòng</td>
-                    <td style="height: 20px">
-                        <asp:DropDownList ID="DropDownList2" runat="server" DataSourceID="SqlDataSource2" DataTextField="TenPhong" DataValueField="MaLP" SelectedValue='<%# Bind("MaLP") %>' Width="175px">
-                        </asp:DropDownList>
-                        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:QuanLyKhachSanConnectionString %>" SelectCommand="SELECT * FROM [LoaiPhong]"></asp:SqlDataSource>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Ảnh: </td>
-                    <td>
-                        <asp:FileUpload ID="FileUpload1" runat="server" />
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <asp:LinkButton ID="lbtnLoad" runat="server" OnClick="lbtnLoad_Click">Load</asp:LinkButton>
-                    </td>
-                    <td>
-                        <asp:Image ID="Image1" runat="server" ImageUrl='<%# Bind("Anh") %>' Width="70px" />
-                    </td>
-                </tr>
-                <tr>
-                    <td>Giá: </td>
-                    <td>
-                        <asp:TextBox ID="GiaTextBox" runat="server" Text='<%# Bind("Gia") %>' />
-                        <br />
-                         <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Không được để trống" Font-Size="10pt" ForeColor="Red" ControlToValidate="GiaTextBox" Display="Dynamic" EnableClientScript="False"></asp:RequiredFieldValidator>
-
-                    </td>
-                </tr>
+                
+                <caption>
+                    <br/>
+                    </tr>
+                    <tr>
+                        <td>Tên phòng: </td>
+                        <td>
+                            <br/>
+                            <asp:TextBox ID="TenPTextBox" runat="server" Text='<%# Bind("TenP") %>' />
+                            <br />
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="TenPTextBox" Display="Dynamic" EnableClientScript="False" ErrorMessage="Không được để trống" Font-Size="10pt" ForeColor="Red"></asp:RequiredFieldValidator>
+                            <br/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Trạng thái: </td>
+                        <td>
+                            <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="TrangThai" DataValueField="TrangThai" SelectedValue='<%# Bind("TrangThai") %>' Width="175px">
+                            </asp:DropDownList>
+                            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:QuanLyKhachSanConnectionString %>" SelectCommand="SELECT TrangThai FROM Phong GROUP BY TrangThai"></asp:SqlDataSource>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="height: 20px">Mã loại phòng: </td>
+                        <td style="height: 20px">
+                            <asp:DropDownList ID="DropDownList2" runat="server" DataSourceID="SqlDataSource2" DataTextField="TenPhong" DataValueField="MaLP" SelectedValue='<%# Bind("MaLP") %>' Width="175px">
+                            </asp:DropDownList>
+                            <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:QuanLyKhachSanConnectionString %>" SelectCommand="SELECT * FROM [LoaiPhong]"></asp:SqlDataSource>
+                        </td>
+                    </tr>
+                    <caption>
+                        <br/>
+                        <tr>
+                            <td>Ảnh: </td>
+                            <td>
+                                <asp:FileUpload ID="FileUpload1" runat="server" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <asp:LinkButton ID="lbtnLoad" runat="server" Font-Size="20px" ForeColor="Blue" OnClick="lbtnLoad_Click">Load</asp:LinkButton>
+                            </td>
+                            <td>
+                                <asp:Image ID="Image1" runat="server" ImageUrl='<%# Bind("Anh") %>' Width="70px" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Giá: </td>
+                            <td>
+                                <asp:TextBox ID="GiaTextBox" runat="server" Text='<%# Bind("Gia") %>' />
+                                <br />
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="GiaTextBox" Display="Dynamic" EnableClientScript="False" ErrorMessage="Không được để trống" Font-Size="10pt" ForeColor="Red"></asp:RequiredFieldValidator>
+                            </td>
+                        </tr>
+                    </caption>
+                </caption>
             </table>
             <br />
             <br />
-            <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Update" />
-            &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
+            <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Sửa" Font-Size="30px" ForeColor="Blue"  />
+            &nbsp;&nbsp;&nbsp;&nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Hủy" Font-Size="30px" ForeColor="Blue" />
         </EditItemTemplate>
         <InsertItemTemplate>
             TenP:
@@ -132,6 +144,6 @@
     </asp:SqlDataSource>
 
     <br />
-    
+    </div>
 </asp:Content>
 

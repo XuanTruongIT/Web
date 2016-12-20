@@ -20,7 +20,8 @@
         <tr>
             <td class="ctdp">Giới tính : </td>
             <td>
-                <asp:TextBox ID="txtGioiTinh" runat="server" required="required"></asp:TextBox>
+                <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="GioiTinh" DataValueField="GioiTinh" Height="22px" Width="175px"></asp:DropDownList>
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:QuanLyKhachSanConnectionString %>" SelectCommand="SELECT GioiTinh FROM KhachHang GROUP BY GioiTinh"></asp:SqlDataSource>
             </td>
         </tr>
         <tr>
