@@ -22,6 +22,11 @@ public class PhongBll
         return _phongDal.getTrangThai();
     }
 
+    public DataTable getAllDataByMaP(string MaP)
+    {
+        return _phongDal.getAllDataByMaP(MaP);
+    }
+
     public DataTable getAllDataByTrangThai(string TrangThai)
     {
         return _phongDal.getAllDataByTrangThai(TrangThai);
@@ -37,5 +42,9 @@ public class PhongBll
     public void XoaPhong(PhongDao _phongDao)
     {
         _phongDal.DeletePhong(_phongDao);
+    }
+    public void UpdatePhong(PhongDao _phongDao)
+    {
+        _phongDal.UpdatePhong(_phongDao);
     }
 }

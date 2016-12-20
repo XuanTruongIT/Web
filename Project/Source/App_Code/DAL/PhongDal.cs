@@ -52,6 +52,25 @@ public class PhongDal : DBConnect
             CloseConnect();
         }
     }
+
+    public DataTable getAllDataByMaP(string MaP)
+    {
+        try
+        {
+            ConnectDB();
+            OpenConnect();
+            string sql = "SELECT * FROM Phong WHERE MaP = @MaP";
+            cmd = new SqlCommand(sql, conn);
+            cmd.Parameters.AddWithValue("MaP", MaP);
+            dt = new DataTable();
+            dt.Load(cmd.ExecuteReader());
+            return dt;
+        }
+        finally
+        {
+            CloseConnect();
+        }
+    }
     public void ThemPhong(PhongDao _phongDao)
     {
         try
@@ -80,7 +99,7 @@ public class PhongDal : DBConnect
         {
             ConnectDB();
             OpenConnect();
-            string sqlUpdate = "UPDATE Phong SET(TenP=@TenP,TrangThai=@TrangThai,MaLP=@MaLP,Gia=@Gia) WHERE @MaP=@MaP";
+            string sqlUpdate = "UPDATE Phong SET(TenP=@TenP,TrangThai=@TrangThai,MaLP=@MaLP,Gia=@Gia) WHERE MaP=@MaP";
             cmd = new SqlCommand(sqlUpdate, conn);
             cmd.Parameters.AddWithValue("MaP", _phongDao.MaP);
             cmd.Parameters.AddWithValue("TenP", _phongDao.TenP);

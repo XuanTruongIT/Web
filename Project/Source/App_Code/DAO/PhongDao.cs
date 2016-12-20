@@ -13,9 +13,19 @@ public class PhongDao
     public string TrangThai { get; set; }
     public int MaLP { get; set; }
     public string Anh { get; set; }
-    public float Gia { get; set; }
+    public int Gia { get; set; }
     public PhongDao()
     {
 
     }
+    public PhongDao(int maP, string tenP, string trangThai, int maLP, string anh, int gia)
+    {
+        this.MaP = maP;
+        this.TenP = tenP;
+        this.TrangThai = trangThai;
+        this.MaLP = maLP;
+        this.Anh = anh;
+        this.Gia = gia;
+    }
+
 }
