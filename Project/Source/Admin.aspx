@@ -3,62 +3,62 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <link href="CSS/Trangchu.css" rel="stylesheet" />
    <div id="tieude">
-        <h1 id="wc">Welcome to Royal Hotel!</h1> 
-        <h2 id="cm">CHÀO MỪNG QUÝ KHÁCH ĐẾN VỚI KHÁCH SẠN ROYAL HÀ NỘI</h2> 
+        <h1 id="wc1">Xin chào, Admin</h1> 
+        <h2 id="cm1">Quản lý thông tin</h2> 
    </div>
 
    <div id="noidung">
        <ul class="">
-         <li id="room"> 
+         <li id="qlroom"> 
              <a href="#">
                  <div class="w">
                      <div class="content_icon">
                          <div class="icon">
-                             <img src="Images/phong.png" />  
+                             <img src="Images/qlphong_img.png" /> 
                          </div>
-                         <div class="title">
+                         <div class="title1">
                              QUẢN LÝ PHÒNG
                          </div>
                      </div>
                  </div>
              </a>
         </li>
-           <li id="note"> 
+           <li id="qlnhanvien"> 
              <a href="#">
                  <div class="w">
                      <div class="content_icon">
                          <div class="icon">
-                             <img src="Images/thongbao.png" />
+                             <img src="Images/nhanvien_img.png" />
                          </div>
-                         <div class="title">
+                         <div class="title1">
                              QUẢN LÝ NHÂN VIÊN
                          </div>
                      </div>
                  </div>
              </a>
         </li>
-            <li id="gioithieu"> 
+            <li id="qlkhachhang"> 
              <a href="#">
                  <div class="w">
                      <div class="content_icon">
                          <div class="icon">
-                             <img src="Images/gioithieu.png" />                           
+                             <img src="Images/khachang_img.png" />                           
                          </div>
-                         <div class="title">
+                         <div class="title1">
                              QUẢN LÝ KHÁCH HÀNG
                          </div>
                      </div>
                  </div>
              </a>
         </li>
-           <li id="sukien"> 
+           <li id="qlthongke"> 
              <a href="#">
                  <div class="w">
                      <div class="content_icon">
                          <div class="icon">
-                             <img src="Images/sukien.png" />                            
+                             <img src="Images/thongke_img.png" />                           
                          </div>
-                         <div class="title">
+                         <div class="title1">
                              THỐNG KÊ
                          </div>
                      </div>

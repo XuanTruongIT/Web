@@ -11,8 +11,8 @@ public partial class Admin : System.Web.UI.Page
     {
         if (!IsPostBack)
         {
-            
-            if (Session["quyen"] == null || (int)Session["quyen"] != 1 || Session["quyen"].ToString()== "" || Session["account"] == null || Session["account"].ToString() == "")
+
+            if (Session["quyen"] == null || (int)Session["quyen"] != 1 || Session["quyen"].ToString() == "" || Session["account"] == null || Session["account"].ToString() == "")
             {
                 Response.Redirect("TrangChu.aspx");
             }
