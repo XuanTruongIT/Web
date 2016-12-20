@@ -99,8 +99,16 @@ INSERT INTO Phong VALUES(N'Phòng 103',N'Trống',2,N'images/3.jpg',3000000)
 INSERT INTO Phong VALUES(N'Phòng 104',N'Trống',1,N'images/1.jpg',1000000)
 INSERT INTO Phong VALUES(N'Phòng 201',N'Trống',2,N'images/3.jpg',3000000)
 INSERT INTO Phong VALUES(N'Phòng 202',N'Trống',1,N'images/4.jpg',1500000)
-INSERT INTO Phong VALUES(N'Phòng 203',N'Trống',3,N'images/5.jpg',5000000)
+INSERT INTO Phong VALUES(N'Phòng 203',N'Trống',3,N'images/5.jpg',7000000)
 INSERT INTO Phong VALUES(N'Phòng 204',N'Đã thuê',3,N'images/8.jpg',5000000)
+INSERT INTO Phong VALUES(N'Phòng 301',N'Trống',1,N'images/1.jpg',1000000)
+INSERT INTO Phong VALUES(N'Phòng 302',N'Trống',1,N'images/2.jpg',800000)
+INSERT INTO Phong VALUES(N'Phòng 303',N'Trống',2,N'images/3.jpg',3000000)
+INSERT INTO Phong VALUES(N'Phòng 404',N'Trống',1,N'images/1.jpg',600000)
+INSERT INTO Phong VALUES(N'Phòng 501',N'Trống',2,N'images/3.jpg',3000000)
+INSERT INTO Phong VALUES(N'Phòng 502',N'Trống',1,N'images/4.jpg',1500000)
+INSERT INTO Phong VALUES(N'Phòng 503',N'Trống',3,N'images/5.jpg',10000000)
+INSERT INTO Phong VALUES(N'Phòng 504',N'Trống',3,N'images/8.jpg',5000000)
 
 
 ---------------------KHÁCH HÀNG -------------------
