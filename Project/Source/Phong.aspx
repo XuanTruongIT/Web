@@ -49,7 +49,7 @@
                                 <asp:Label ID="lblTenP" runat="server" Text='<%# Eval("TenP") %>'></asp:Label>
                             </td>
                             <td>Giá:
-                        <asp:Label ID="lblGia" runat="server" Text='<%# Eval("Gia") %>'></asp:Label>
+                        <asp:Label ID="lblGia" runat="server" Text='<%# String.Format("{0:0,0}",Eval("Gia"))+ " VND" %>' ForeColor="Red"></asp:Label>
                             </td>
                             <td style="width: 4px">&nbsp;</td>
                             <td style="width: 4px">&nbsp;</td>
@@ -88,7 +88,7 @@
             </asp:SqlDataSource>
             <asp:SqlDataSource ID="DBPhong2" runat="server" ConnectionString="<%$ ConnectionStrings:QuanLyKhachSanConnectionString %>" SelectCommand="SELECT * FROM [Phong] WHERE ([Gia] = @Gia)">
                 <SelectParameters>
-                    <asp:SessionParameter Name="Gia" SessionField="Gia" Type="Int32" />
+                    <asp:SessionParameter Name="Gia" SessionField="Gia" Type="Int32"/>
                 </SelectParameters>
             </asp:SqlDataSource>
             <asp:SqlDataSource ID="DBPhong1" runat="server" ConnectionString="<%$ ConnectionStrings:QuanLyKhachSanConnectionString %>" SelectCommand="SELECT Phong.MaP, Phong.TenP, Phong.TrangThai, Phong.MaLP, Phong.Anh, Phong.Gia FROM LoaiPhong INNER JOIN Phong ON LoaiPhong.MaLP = Phong.MaLP WHERE (LoaiPhong.MaLP = @MaLP)">

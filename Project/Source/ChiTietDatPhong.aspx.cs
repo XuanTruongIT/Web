@@ -38,10 +38,11 @@ public partial class ChiTietDatPhong : System.Web.UI.Page
 
             //
 
-            /*Nhập ngày*/
+            /*Điều kiện nhập ngày*/
             DateTime ngayden = DateTime.Parse(txtNgayDen.Text);
             DateTime ngaydi = DateTime.Parse(txtNgayDi.Text);
             DateTime ngayhientai = DateTime.Now.AddDays(-1);
+
             if (ngayden >= ngayhientai && ngaydi > ngayhientai && ngaydi > ngayden)
             {
                 _datPhongDao.NgayDen = ngayden;

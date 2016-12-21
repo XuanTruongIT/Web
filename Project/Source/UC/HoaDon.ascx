@@ -12,8 +12,10 @@
                 Tìm kiếm theo tên khách hàng:
                 <asp:TextBox ID="txtSearch" runat="server" OnTextChanged="txtSearch_TextChanged"></asp:TextBox>
                 &nbsp;&nbsp;&nbsp;
-                <asp:Button ID="btntimkiem" runat="server" Text="Tìm kiếm" OnClick="btntimkiem_Click" /></p>
-                
+                <asp:Button ID="btntimkiem" runat="server" Text="Tìm kiếm" OnClick="btntimkiem_Click" />
+                <p>
+                </p>
+                <p>
                 </p>
                 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Vertical">
                     <AlternatingRowStyle BackColor="#DCDCDC" />
@@ -25,7 +27,7 @@
                         <asp:BoundField DataField="NgayDen" HeaderText="Ngày đặt phòng" />
                         <asp:BoundField DataField="NgayDi" HeaderText="Ngày rời đi" />
                         <asp:BoundField DataField="NgayLap" HeaderText="Ngày lập hóa đơn" />
-                        <asp:BoundField DataField="ThanhTien" HeaderText="Thành tiền" />
+                        <asp:BoundField DataField="ThanhTien" DataFormatString="{0:0,0}  VND" HeaderText="Thành tiền" />
                     </Columns>
                     <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
                     <HeaderStyle BackColor="#000084" Font-Bold="True" ForeColor="White" />
@@ -37,7 +39,10 @@
                     <SortedDescendingCellStyle BackColor="#CAC9C9" />
                     <SortedDescendingHeaderStyle BackColor="#000065" />
                 </asp:GridView>
+                <p>
+                </p>
             </p>
+                
         </ContentTemplate>
     </asp:UpdatePanel>
     </div>
